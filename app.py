@@ -154,7 +154,9 @@ if ask_clicked and question.strip():
     )
 
     final_prompt = prompt.format(context=context, question=question)
-    answer = llm.invoke(final_prompt)
+    # final_prompt is the full prompt with context + question
+    answer = llm(final_prompt)[0]['generated_text']
+
 
     st.session_state.chat_history.append(
         {
