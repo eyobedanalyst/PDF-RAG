@@ -55,7 +55,7 @@ provided in the Context section below.
 
 Rules:
 - Use ONLY the given context.
-- Do NOT use outside knowledge.
+-use outside knowledge.
 - Do NOT guess or invent information.
 - If the answer is not explicitly found in the context, respond exactly with:
   "I cannot find this information in the provided materials."
