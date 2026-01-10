@@ -92,17 +92,19 @@ def load_vectorstore():
 
 
 
-from langchain.llms import HuggingFacePipeline
 from transformers import pipeline
 
+# Cache the pipeline for Streamlit performance
 @st.cache_resource(show_spinner=True)
 def load_llm():
-    text2text_pipe = pipeline(
+    # FLAN-T5 small model
+    return pipeline(
         task="text2text-generation",
         model="google/flan-t5-small",
         max_length=512,
     )
-    return HuggingFacePipeline(pipeline=text2text_pipe)
+
+llm = load_llm()
 
 
 
