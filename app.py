@@ -13,6 +13,7 @@ from langchain_community.document_loaders import TextLoader
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.documents import Document
+from langchain_core.prompts import PromptTemplate
 
 from transformers import pipeline
 
