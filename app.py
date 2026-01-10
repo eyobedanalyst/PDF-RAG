@@ -92,11 +92,18 @@ def load_vectorstore():
 
 
 
-from langchain.chat_models import HuggingFaceTextToText
+from langchain.llms import HuggingFacePipeline
+from transformers import pipeline
 
 @st.cache_resource(show_spinner=True)
 def load_llm():
-    return HuggingFaceTextToText(model_name=LLM_MODEL_NAME, max_output_tokens=512)
+    text2text_pipe = pipeline(
+        task="text2text-generation",
+        model="google/flan-t5-small",
+        max_length=512,
+    )
+    return HuggingFacePipeline(pipeline=text2text_pipe)
+
 
 
 
