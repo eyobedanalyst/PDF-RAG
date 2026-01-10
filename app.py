@@ -136,7 +136,9 @@ with col2:
 
 if clear_clicked:
     st.session_state.chat_history = []
-    st.experimental_rerun()
+    question = ""  # reset input
+    st.write("Chat cleared! ✅")
+
 
 # ==============================
 # RAG Logic
