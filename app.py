@@ -8,10 +8,12 @@ Create a public, student-friendly chat interface for the Bootstrap RAG system.
 import streamlit as st
 from pathlib import Path
 
-from langchain.vectorstores import FAISS
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.llms import HuggingFacePipeline
-from langchain.prompts import PromptTemplate
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_community.document_loaders import TextLoader
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import FAISS
+from langchain_core.documents import Document
+
 from transformers import pipeline
 
 # ==============================
