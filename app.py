@@ -122,7 +122,11 @@ if "chat_history" not in st.session_state:
 # ==============================
 # UI Controls
 # ==============================
-question = st.text_input("Enter your question about Bootstrap 5:", placeholder="e.g. What does col-md-6 mean in Bootstrap?")("Enter your question about Bootstrap 5:")
+question = st.text_input(
+    "Enter your question about Bootstrap 5:",
+    placeholder="e.g. What does col-md-6 mean in Bootstrap?"
+)
+
 
 col1, col2 = st.columns([1, 1])
 with col1:
