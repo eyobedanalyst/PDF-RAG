@@ -100,7 +100,7 @@ def load_llm():
     # FLAN-T5 small model
     return pipeline(
         task="text2text-generation",
-        model="google/flan-t5-small",
+        model="google/flan-t5-base",
         max_length=512,
     )
 
@@ -124,7 +124,7 @@ if "chat_history" not in st.session_state:
 # ==============================
 question = st.text_input(
     "Enter your question about Bootstrap 5:",
-    placeholder="e.g. What does col-md-6 mean in Bootstrap?"
+    placeholder="e.g. What IS Bootstrap?"
 )
 
 
