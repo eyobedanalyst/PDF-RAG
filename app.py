@@ -154,8 +154,8 @@ if "chat_history" not in st.session_state:
 # UI Controls
 # ==============================
 question = st.text_input(
-    "Enter your question about Bootstrap 5:",
-    placeholder="e.g. What IS Bootstrap?"
+    "Enter your question about Bootstrap 5 and MODULE 3 of Grade 11:",
+    placeholder="e.g. What IS Bootstrap? , what is Profession ?"
 )
 
 
