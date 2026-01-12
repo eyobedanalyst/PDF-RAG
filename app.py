@@ -21,12 +21,12 @@ from transformers import pipeline
 # Page Configuration
 # ==============================
 st.set_page_config(
-    page_title="Bootstrap 5 Assistant",
+    page_title="Mr Eyobed EPT Learning Assistant",
     page_icon="📘",
     layout="wide",
 )
 
-st.title("📘 Bootstrap 5 Learning Assistant")
+st.title("📘 EPT Learning Assistant")
 
 # DEBUG: confirm app is rendering
 st.write("✅ App loaded successfully")
