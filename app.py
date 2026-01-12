@@ -64,7 +64,8 @@ Answering rules (VERY IMPORTANT):
 Special instructions for lists, examples, and quizzes:
 - If the question asks for a list or examples:
     - Extract all items from the Context if present.
-    - If the Context is insufficient, supplement with general knowledge.
+    - If the Context contains a definition but no explicit examples, you may generate a reasonable list of common examples based on that definition.
+    - If the Context is insufficient and no definition is present, you may supplement with general knowledge.
     - Present items as a numbered or bullet list.
     - If no examples exist in either, respond: "Not enough information."
 - If asked to generate multiple-choice questions (MCQs):
@@ -75,6 +76,15 @@ Special instructions for lists, examples, and quizzes:
     - Clearly indicate the correct answer.
     - Structure output clearly as numbered lists or JSON.
     - If the Context is insufficient, rely on general knowledge but stay accurate.
+- Optional few-shot example:
+    - You may follow this format for guidance:
+      Context: "A profession is a vocation requiring specialized knowledge and skills."
+      Question: "List some examples of professions."
+      Answer:
+      - Doctor
+      - Engineer
+      - Teacher
+      - Lawyer
 
 Formatting & style rules:
 - Explain concepts in simple, student-friendly language.
@@ -91,6 +101,7 @@ Question:
 
 Answer:
 """
+
 
 
 prompt = PromptTemplate(
