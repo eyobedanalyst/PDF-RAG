@@ -26,14 +26,25 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("📘 EPT Learning Assistant")
+st.title("📘 Mr Eyobed EPT Learning Assistant")
 
-# DEBUG: confirm app is rendering
+# ===============================
+# DEBUG / Info: Confirm app is running
+# ===============================
 st.write("✅ App loaded successfully")
-("📘 Bootstrap 5 Learning Assistant")
+
+# App description / instructions
 st.markdown(
-    "Ask questions about **Bootstrap 5**. Answers are generated *only* from the provided course materials."  
+    """
+    📘 **TALK YOUR NOTE**
+
+    Ask questions about **your course notes**.  
+    Answers are generated *only* from the provided materials.  
+
+    ⚠️ This chatbot is **under development**, so please consider that some answers may be incomplete.
+    """
 )
+
 
 # ==============================
 # Configuration
